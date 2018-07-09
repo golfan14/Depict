@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SimpleMap from './components/SimpleMap';
 
 class App extends Component {
+  // state = {
+  //    pins: []// list of push pins 
+  //    //in componentDidMount, get pins form database and update state
+  //    //passed through to the map component 
+
+  // }
+  // //method
+  //   // takes in location geocodes location ( name of location)
+  //   // give lat and lng 
+  //   // pushes to database
+  //   // pull updated list from database
+
+  // //give search bar above method as a prop 
+  //   // inside handleFormdsubmit ()
+  //   // 
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="map">
+       
+        <SimpleMap />
+
       </div>
+     
     );
   }
 }
 
 export default App;
+
+
