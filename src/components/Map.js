@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import Geosuggest from 'react-geosuggest';
-import Search from './Search';
-import Marker from './Pins';
-
+ 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
-class SimpleMap extends Component {
+ 
+class Map extends Component {
   static defaultProps = {
     center: {
-      lat: 21.583094,
-      lng: -15.278345
+      lat: 40.8136,
+      lng: -96.7026
     },
-    zoom: 0.1
+    zoom: 0
   };
-
+ 
   render() {
     return (
       // Important! Always set the container height explicitly
-      <div style={{ height: '100vh', width: '100%' }}>
-        <Search /> 
+      <div style={{ height: '80vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" }}
+          bootstrapURLKeys={{ key: "AIzaSyDDzA2HZSKiw9Xolf4KT0uI3DXSS3lMMn8" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
@@ -30,11 +26,10 @@ class SimpleMap extends Component {
             lng={30.337844}
             text={'Kreyser Avrora'}
           />
-          <Marker lat={props.lat} lng={props.lng} />
         </GoogleMapReact>
       </div>
     );
   }
 }
-
-export default SimpleMap;
+ 
+export default Map;
