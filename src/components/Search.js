@@ -1,11 +1,18 @@
 import React from 'react';
 import Geosuggest from 'react-geosuggest';
+
 /*global google */
 
 class Search extends React.Component {
+ 
   /**
    * Render the example app
    */
+ 
+
+
+
+
   render() {
     var fixtures = [
       {label: 'Old Elbe Tunnel, Hamburg', location: {lat: 53.5459, lng: 9.966576}},
@@ -15,10 +22,11 @@ class Search extends React.Component {
 
     return (
       <div>
+        
         <Geosuggest
           ref={el=>this._geoSuggest=el}
           placeholder="Start typing!"
-          initialValue="Hamburg"
+          initialValue="Denver"
           fixtures={fixtures}
           onSuggestSelect={this.onSuggestSelect}
           location={new google.maps.LatLng(53.558572, 9.9278215)}
@@ -37,10 +45,11 @@ class Search extends React.Component {
    * When a suggest got selected
    * @param  {Object} suggest The suggest
    */
-  onSuggestSelect(suggest) {
+  onSuggestSelect = suggest => {
     console.log(suggest);
+    this.props.addLocation(suggest);
   }
+
 };
 
 export default Search;
-

@@ -6,21 +6,7 @@ import Map from './components/Map';
 
 
 class App extends Component {
-  // state = {
-  //    pins: []// list of push pins 
-  //    //in componentDidMount, get pins form database and update state
-  //    //passed through to the map component 
-
-  // }
-  // //method
-  //   // takes in location geocodes location ( name of location)
-  //   // give lat and lng 
-  //   // pushes to database
-  //   // pull updated list from database
-
-  // //give search bar above method as a prop 
-  //   // inside handleFormdsubmit ()
-  //   // 
+ 
   constructor(props) {
     super(props);
     this.state = {
@@ -43,7 +29,7 @@ class App extends Component {
     const isLoggedIn = this.state.user.isLoggedIn
     return (
       <div className="map">
-        <SimpleMap />
+       
       </div>
       <div className="App">
         <header className="App-header">
@@ -53,6 +39,9 @@ class App extends Component {
         <p className="App-intro">
           {/* To get started, sign in with Facebook. */}
         </p>
+
+        <MapContainer addLocation = {this.addLocation} markers = {this.state.markers}/>
+
         {!isLoggedIn && (<Facebook userdata={this.state.user} LogInfn={this.logIn}/>)}
         {isLoggedIn && (<Map />)}
       </div>
