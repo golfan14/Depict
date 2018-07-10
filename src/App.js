@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
 import Facebook from './components/Facebook';
-import Map from './components/Map';
+import MapContainer from './components/Map';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 
 
 class App extends Component {
+
+
+
+ //log in =======================================================
   constructor(props) {
     super(props);
     this.state = {
@@ -18,13 +19,35 @@ class App extends Component {
       }
   } 
     this.logIn = this.logIn.bind(this)  
-  }
+  };
 
   logIn(user) {
     this.setState({
       user
     })
+  };
+
+// map markers====================================================
+
+
+state = {
+  markers: []
+};
+
+
+addLocation = data => {
+ if (data) {
+  const marker = {
+    name: data.gmaps.formatted_address,
+    lat: data.location.lat,
+    lng: data.location.lng
   }
+  this.setState({ markers: [...this.state.markers, marker]})
+ }
+  
+}
+
+
 
 
   render() {
@@ -39,15 +62,19 @@ class App extends Component {
           {/* To get started, sign in with Facebook. */}
         </p>
         {!isLoggedIn && (<Facebook userdata={this.state.user} LogInfn={this.logIn}/>)}
-    {isLoggedIn && (<Map />)}
+    {isLoggedIn && (<MapContainer />)}
     {isLoggedIn && (<Carousel />)}
         {/* <Footer/> */}
 
+        <MapContainer addLocation = {this.addLocation} markers = {this.state.markers}/>
 
         <Footer />
       </div>
+      
     );
   }
-}
+};
 
 export default App;
+
+
