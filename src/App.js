@@ -4,6 +4,7 @@ import './App.css';
 
 import Facebook from './components/Facebook';
 import Map from './components/Map';
+import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 
 
@@ -38,8 +39,9 @@ class App extends Component {
           {/* To get started, sign in with Facebook. */}
         </p>
         {!isLoggedIn && (<Facebook userdata={this.state.user} LogInfn={this.logIn}/>)}
-        {isLoggedIn && (<Map />)}
-        
+    {isLoggedIn && (<Map />)}
+    {isLoggedIn && (<Carousel />)}
+        {/* <Footer/> */}
 
 
         <Footer />
