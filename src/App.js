@@ -62,7 +62,7 @@ addLocation = data => {
           {/* To get started, sign in with Facebook. */}
         </p>
         {!isLoggedIn && (<Facebook userdata={this.state.user} LogInfn={this.logIn}/>)}
-    {isLoggedIn && (<Map />)}
+    {isLoggedIn && (<MapContainer />)}
     {isLoggedIn && (<Carousel />)}
         {/* <Footer/> */}
 
