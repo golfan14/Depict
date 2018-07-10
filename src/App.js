@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
 import Facebook from './components/Facebook';
-import MapContainer from './components/Map';
+import Map from './components/Map';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 
 
 
 class App extends Component {
-
-
-
-  //log in =======================================================
   constructor(props) {
     super(props);
     this.state = {
@@ -78,8 +77,6 @@ class App extends Component {
 
     );
   }
-};
+}
 
 export default App;
-
-
