@@ -4,6 +4,7 @@ import './App.css';
 
 import Facebook from './components/Facebook';
 import Map from './components/Map';
+import Footer from './components/Footer';
 
 
 class App extends Component {
@@ -41,7 +42,7 @@ class App extends Component {
         
 
 
-
+        <Footer />
       </div>
     );
   }
