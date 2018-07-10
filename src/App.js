@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
 import Facebook from './components/Facebook';
-import Map from './components/Map';
+import MapContainer from './components/Map';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
 
