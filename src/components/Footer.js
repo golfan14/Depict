@@ -6,7 +6,7 @@ const Footer = props => {
             <span class="navbar-text">
                 <a href="PrivacyPolicy.html" target="_blank">Privacy Policy</a>
                 <br/>
-                <a href="termsandcondtionslink">Terms and Conditions</a>
+                <a href="TermsandCon.html">Terms and Conditions</a>
             </span>
         </nav>
     )
