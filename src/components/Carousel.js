@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Photo from "./Photo";
-import API from "../../routes/api/";
+import API from "../utils/API";
 
 
 class Carousel extends Component {
