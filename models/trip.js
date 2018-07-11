@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const tripSchema = new Schema({
-    facebookid: {type: String},
-    location: {type: String}
+    location: {type: String},
+    photos: [{ type: Schema.Types.ObjectId, ref: 'Photo' }]
 });
 
 const Trip = mongoose.model("Trip", tripSchema);
