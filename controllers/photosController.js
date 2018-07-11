@@ -36,13 +36,18 @@ module.exports = {
     //     url : "https://s3.us-east-2.amazonaws.com/depict-travel-photos/" + newFileName,
     //     tripId : req.params.id
     //   }
-  
-    //   //post to mongo photos collection
-    //   db.Photo.create(newPhoto, function(data){
-    //     console.log(data);
-    //   }).catch(function(err){
-    //     return err;
-    //   });
+
+    // const newPhoto = {
+    //   tripid: req.params.id,
+    //   imageurl: req.body.imageurl,
+    //   caption: req.body.caption
+    // };
+
+    const newPhoto = req.body;
+      //post to mongo photos collection
+      db.Photo.create(newPhoto)
+      .then((data) => res.json(data))
+      .catch((err) => res.json(err));
   
     //   console.log("About to upload");
     //   var uploader = client.uploadFile(params);

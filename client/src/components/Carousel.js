@@ -17,7 +17,7 @@ class Carousel extends Component {
     
     addPhoto = (tripId  , event) => {
         event.preventDefault();
-        API.addPhoto(tripId);
+        API.findTrip(tripId);
         // console.log("::!!!!!!");
     }
 
