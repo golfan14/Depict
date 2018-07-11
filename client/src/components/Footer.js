@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = props => {
     return (
-        <nav class="navbar navbar-dark bg-dark">
-            <span class="navbar-text">
+        <nav className="navbar navbar-dark bg-dark">
+            <span className="navbar-text">
                 <a href="PrivacyPolicy.html" target="_blank">Privacy Policy</a>
                 <br/>
                 <a href="TermsandCon.html">Terms and Conditions</a>

@@ -7,5 +7,8 @@ router.route("/:id")
 .get(photosController.findTrip)
 .post(photosController.addPhoto);
 
+// .post(console.log("hit the git"));
 
 
+
+module.exports = router;

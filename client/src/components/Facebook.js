@@ -13,7 +13,8 @@ class Facebook extends Component {
 
     responseFacebook = response => {
         console.log (response);
-
+        //CONNECT API ROUTE THAT CREATES NEW USER
+        //
         this.setState({
             name: response.name,
             email: response.email,
