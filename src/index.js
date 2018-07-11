@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-/*global google */
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
