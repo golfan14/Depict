@@ -24,7 +24,7 @@ class Carousel extends Component {
         return (
             <div class="trip-wrap">
                 <div class="carousel-wrap">
-                    <div onClick={this.addPhoto} class = "carousel-item add-photo">
+                    <div onClick={this.addPhoto} class = "photo-carousel-item add-photo">
                         Add Photo
                     </div>
                     <Photo/>
