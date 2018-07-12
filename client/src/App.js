@@ -4,6 +4,7 @@ import Facebook from './components/Facebook';
 import MapContainer from './components/Map';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
+import API from './utils/API';
 
 
 

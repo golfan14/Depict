@@ -1,23 +1,8 @@
 {
-<<<<<<< HEAD
-  "name": "project-3",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.18.0",
-    "google-map-react": "^1.0.5",
-    "mongoose": "^5.2.3",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-facebook-login": "^4.0.1",
-    "react-scripts": "1.1.4"
-  },
-=======
   "name": "mern",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
->>>>>>> bebee42467e6015a6b8ad79e18f2c8518839f841
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
